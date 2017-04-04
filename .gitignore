@@ -2,5 +2,6 @@
 tests/alu.circ
 tests/regfile.circ
 tests/regtest-harness.circ
+tests/reference_output/regtest.out
 TEST_LOG
 *pyc
