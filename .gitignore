@@ -1,5 +1,6 @@
 *~
 tests/alu.circ
 tests/regfile.circ
+tests/regtest-harness.circ
 TEST_LOG
 *pyc
