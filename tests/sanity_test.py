@@ -48,6 +48,8 @@ class TestCase():
         print "CANNOT FORMAT test type=",typ
       else:
           for row in debug_buffer:
+	    if(any([not num.find("E")==-1 for num in row])):
+		return (False, "Circuit outputs error values")
             wtr.writerow([dec.bin2hex(b) for b in row[0].split('\t')])
             wtr.writerow([dec.bin2hex(b) for b in row[1].split('\t')])
 
