@@ -11,8 +11,10 @@ def bin_encode(value, length = None ):
 	bin_str = bin_str.zfill(length)
 	bin_str_space = [bin_str[i:i+4] for i in range(0, length, 4)]
 	return " ".join(bin_str_space)
+
+#encode as a numeric hexidecimal string
 def hex_encode(num):
-	return num.__hex__()[:2]
+	return num.__hex__()[2:]
 
 #compile a circuit template
 #you can put variables in a template
