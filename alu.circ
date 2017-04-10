@@ -1483,7 +1483,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(660,200)" to="(720,200)"/>
     <wire from="(320,270)" to="(440,270)"/>
     <wire from="(720,80)" to="(740,80)"/>
-    <wire from="(360,480)" to="(370,480)"/>
     <wire from="(980,100)" to="(980,110)"/>
     <wire from="(980,100)" to="(1180,100)"/>
     <wire from="(680,160)" to="(720,160)"/>
@@ -1513,16 +1512,12 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(560,50)" to="(590,50)"/>
     <wire from="(530,110)" to="(540,110)"/>
     <wire from="(320,310)" to="(370,310)"/>
-    <wire from="(420,470)" to="(500,470)"/>
     <wire from="(770,180)" to="(830,180)"/>
     <wire from="(440,280)" to="(490,280)"/>
     <wire from="(590,70)" to="(680,70)"/>
-    <wire from="(370,480)" to="(370,490)"/>
-    <wire from="(370,490)" to="(400,490)"/>
     <wire from="(420,70)" to="(510,70)"/>
     <wire from="(880,180)" to="(880,290)"/>
     <wire from="(830,130)" to="(1000,130)"/>
-    <wire from="(420,470)" to="(420,480)"/>
     <wire from="(520,180)" to="(560,180)"/>
     <wire from="(40,60)" to="(170,60)"/>
     <wire from="(680,130)" to="(680,160)"/>
@@ -1618,46 +1613,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="facing" val="east"/>
       <a name="width" val="32"/>
       <a name="label" val="X"/>
-    </comp>
-    <comp lib="0" loc="(500,470)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="Signed Overflow"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(400,490)" name="Splitter">
-      <a name="incoming" val="32"/>
-      <a name="appear" val="center"/>
-      <a name="bit2" val="1"/>
-      <a name="bit3" val="1"/>
-      <a name="bit4" val="1"/>
-      <a name="bit5" val="1"/>
-      <a name="bit6" val="1"/>
-      <a name="bit7" val="1"/>
-      <a name="bit8" val="1"/>
-      <a name="bit9" val="1"/>
-      <a name="bit10" val="1"/>
-      <a name="bit11" val="1"/>
-      <a name="bit12" val="1"/>
-      <a name="bit13" val="1"/>
-      <a name="bit14" val="1"/>
-      <a name="bit15" val="1"/>
-      <a name="bit16" val="1"/>
-      <a name="bit17" val="1"/>
-      <a name="bit18" val="1"/>
-      <a name="bit19" val="1"/>
-      <a name="bit20" val="1"/>
-      <a name="bit21" val="1"/>
-      <a name="bit22" val="1"/>
-      <a name="bit23" val="1"/>
-      <a name="bit24" val="1"/>
-      <a name="bit25" val="1"/>
-      <a name="bit26" val="1"/>
-      <a name="bit27" val="1"/>
-      <a name="bit28" val="1"/>
-      <a name="bit29" val="1"/>
-      <a name="bit30" val="1"/>
-      <a name="bit31" val="1"/>
     </comp>
     <comp lib="3" loc="(720,80)" name="Comparator">
       <a name="width" val="1"/>
@@ -1763,11 +1718,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="X"/>
     </comp>
     <comp lib="0" loc="(330,210)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="32"/>
-      <a name="label" val="Y"/>
-    </comp>
-    <comp lib="0" loc="(360,480)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="width" val="32"/>
       <a name="label" val="Y"/>
