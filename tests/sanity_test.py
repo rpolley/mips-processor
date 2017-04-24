@@ -132,5 +132,33 @@ tests = [
                  os.path.join(file_locations,'reference_output/regtest.out')), "regfile"),
 ]
 
+# 2 stage pipeline tests
+p2_tests = [
+  ("CPU starter test",
+        TestCase(os.path.join(file_locations,'CPU-starter_kit_test.circ'),
+                 os.path.join(file_locations,'reference_output/CPU-starter_kit_test.out')), "cpu"),
+]
+
+# Single-cycle (sc) tests
+p2sc_tests = [
+  ("CPU starter test",
+        TestCase(os.path.join(file_locations,'CPU-starter_kit_test.circ'),
+                 os.path.join(file_locations,'reference_output/CPU-starter_kit_test.sc.out')), "cpu"),
+  ("func test",
+        TestCase(os.path.join(file_locations,'func_test.circ'),
+                 os.path.join(file_locations,'reference_output/func_test.sc.out')), "cpu-end"), 
+]
+
 if __name__ == '__main__':
-  run_tests(tests)
+  if len(sys.argv) < 2:
+    print("Usage: " + sys.argv[0] + " (p1|p2)")
+    sys.exit(-1)
+  if sys.argv[1] == 'p1':
+    run_tests(p1_tests)
+  elif sys.argv[1] == 'p2':
+    run_tests(p2_tests)
+  elif sys.argv[1] == 'p2sc':
+    run_tests(p2sc_tests)
+  else:
+    print("Usage: " + sys.argv[0] + " (p1|p2)")
+    sys.exit(-1)
