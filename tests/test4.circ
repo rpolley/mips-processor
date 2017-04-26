@@ -29,7 +29,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <tool name="Bit Extender">
       <a name="in_width" val="24"/>
       <a name="out_width" val="5"/>
-      <a name="type" val="sign"/>
     </tool>
   </lib>
   <lib desc="#Gates" name="1">
@@ -224,7 +223,21 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(70,100)" to="(70,160)"/>
     <wire from="(570,250)" to="(580,250)"/>
     <wire from="(560,250)" to="(570,250)"/>
-    <comp lib="7" loc="(280,210)" name="main"/>
+    <comp lib="0" loc="(890,250)" name="Tunnel">
+      <a name="width" val="32"/>
+      <a name="label" val="Instruction"/>
+    </comp>
+    <comp lib="0" loc="(250,100)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+      <a name="label" val="$s2 Value"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="6" loc="(710,202)" name="Text">
+      <a name="text" val="Instruction Memory"/>
+      <a name="font" val="SansSerif bold 12"/>
+    </comp>
     <comp lib="0" loc="(580,250)" name="Splitter">
       <a name="fanout" val="1"/>
       <a name="incoming" val="32"/>
@@ -262,22 +275,44 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="bit30" val="none"/>
       <a name="bit31" val="none"/>
     </comp>
-    <comp lib="0" loc="(250,100)" name="Pin">
+    <comp lib="7" loc="(280,210)" name="main"/>
+    <comp lib="0" loc="(550,350)" name="Probe">
+      <a name="radix" val="16"/>
+    </comp>
+    <comp lib="0" loc="(370,440)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="halt"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(70,100)" name="Pin">
       <a name="facing" val="south"/>
       <a name="output" val="true"/>
       <a name="width" val="32"/>
-      <a name="label" val="$s2 Value"/>
+      <a name="label" val="$s0 Value"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="4" loc="(780,250)" name="ROM">
+      <a name="addrWidth" val="24"/>
+      <a name="dataWidth" val="32"/>
+      <a name="contents">addr/data: 24 32
+34110003 20120001 2631ffff 129040 1620fffd 26520001 128025
+</a>
+    </comp>
+    <comp lib="0" loc="(160,100)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+      <a name="label" val="$s1 Value"/>
       <a name="labelloc" val="north"/>
     </comp>
     <comp lib="0" loc="(880,350)" name="Probe">
       <a name="facing" val="west"/>
       <a name="radix" val="16"/>
     </comp>
-    <comp lib="0" loc="(550,350)" name="Probe">
-      <a name="radix" val="16"/>
-    </comp>
-    <comp lib="3" loc="(350,440)" name="Comparator">
+    <comp lib="0" loc="(300,210)" name="Tunnel">
       <a name="width" val="32"/>
+      <a name="label" val="fetch_addr"/>
     </comp>
     <comp lib="0" loc="(190,210)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -287,66 +322,30 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <comp lib="6" loc="(268,272)" name="Text">
       <a name="text" val="YOUR CPU SHOULD FIT IN HERE!"/>
     </comp>
-    <comp lib="0" loc="(70,100)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="output" val="true"/>
+    <comp lib="3" loc="(350,440)" name="Comparator">
       <a name="width" val="32"/>
-      <a name="label" val="$s0 Value"/>
-      <a name="labelloc" val="north"/>
-    </comp>
-    <comp lib="6" loc="(710,202)" name="Text">
-      <a name="text" val="Instruction Memory"/>
-      <a name="font" val="SansSerif bold 12"/>
     </comp>
     <comp lib="0" loc="(300,450)" name="Constant">
       <a name="width" val="32"/>
-      <a name="value" val="0x4"/>
-    </comp>
-    <comp lib="0" loc="(890,250)" name="Tunnel">
-      <a name="width" val="32"/>
-      <a name="label" val="Instruction"/>
-    </comp>
-    <comp lib="0" loc="(370,440)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="halt"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(430,100)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="output" val="true"/>
-      <a name="width" val="32"/>
-      <a name="label" val="$sp Value"/>
-      <a name="labelloc" val="north"/>
-    </comp>
-    <comp lib="0" loc="(160,390)" name="Clock">
-      <a name="facing" val="north"/>
+      <a name="value" val="0x20"/>
     </comp>
     <comp lib="0" loc="(560,250)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="width" val="32"/>
       <a name="label" val="fetch_addr"/>
     </comp>
+    <comp lib="0" loc="(160,390)" name="Clock">
+      <a name="facing" val="north"/>
+    </comp>
     <comp lib="4" loc="(280,350)" name="Counter">
       <a name="width" val="32"/>
       <a name="max" val="0xffffffff"/>
     </comp>
-    <comp lib="4" loc="(780,250)" name="ROM">
-      <a name="addrWidth" val="24"/>
-      <a name="dataWidth" val="32"/>
-      <a name="contents">addr/data: 24 32
-34110003 20120001 2631ffff 129040 1620fffd 26520001 128025
-</a>
-    </comp>
-    <comp lib="0" loc="(300,210)" name="Tunnel">
-      <a name="width" val="32"/>
-      <a name="label" val="fetch_addr"/>
-    </comp>
-    <comp lib="0" loc="(160,100)" name="Pin">
+    <comp lib="0" loc="(430,100)" name="Pin">
       <a name="facing" val="south"/>
       <a name="output" val="true"/>
       <a name="width" val="32"/>
-      <a name="label" val="$s1 Value"/>
+      <a name="label" val="$sp Value"/>
       <a name="labelloc" val="north"/>
     </comp>
   </circuit>
