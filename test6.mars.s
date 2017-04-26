@@ -1,3 +1,5 @@
+	ori  $sp, $zero, 0
+	ori $sp, $zero, 0x00003ffc
 	add  $s0, $zero, 1
 	add  $s1, $zero, 2
 	
