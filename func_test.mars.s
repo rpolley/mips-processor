@@ -2,7 +2,7 @@ ori $sp,$zero,0
 addi $t0, $zero, 12
 add $a0, $t0, $zero
 jal mul3
-sub $t0, $v0, $zero 
+add $t0, $v0, $zero 
 j exit
 
 mul3:
