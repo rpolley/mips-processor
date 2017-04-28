@@ -13,10 +13,11 @@
 #arr[i+1] = temp1
 #temp1 = temp2
 
-la $t0, INITIAL
+la $t0, 0
 la $t2, 32
 init:
 	lw $t1, INITIAL($t0)
+	la $t1, 0xffffffff
 	sw $t1, DISPLAY($t0)
 	addiu $t0, $t0, 4
 	bne $t0, $t2, init
